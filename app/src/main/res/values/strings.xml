@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EatMorePizza</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category_pizza"><u>Pizza</u></string>
+    <string name="category_hamburger"><u>Hamburger</u></string>
+    <string name="category_chicken"><u>Chicken</u></string>
+    <string name="category_salad"><u>Salad</u></string>
+
+</resources>

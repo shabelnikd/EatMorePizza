@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/MainScreen"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/LogIn"
+        android:name="com.shabelnikd.eatmorepizza.LogInFragment"
+        android:label="Log in"
+        tools:layout="@layout/fragment_log_in"
+        >
+        <action
+            android:id="@+id/action_LogIn_to_Register"
+            app:destination="@id/Register" />
+        <action
+            android:id="@+id/action_LogIn_to_MainScreen"
+            app:destination="@id/MainScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Register"
+        android:name="com.shabelnikd.eatmorepizza.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register"
+        >
+        <action
+            android:id="@+id/action_Register_to_LogIn"
+            app:destination="@id/LogIn" />
+        <action
+            android:id="@+id/action_Register_to_MainScreen"
+            app:destination="@id/MainScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MainScreen"
+        android:name="com.shabelnikd.eatmorepizza.MainScreenFragment"
+        android:label="MainScreen"
+        tools:layout="@layout/fragment_main_screen"
+        />
+
+</navigation>

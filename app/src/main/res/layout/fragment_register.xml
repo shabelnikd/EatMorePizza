@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LogIn"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInFragment">
+
+    <TextView
+        android:id="@+id/tvLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Sign Up"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintBottom_toBottomOf="@id/tvLogIn"
+        app:layout_constraintStart_toStartOf="@id/tvLogIn"
+        app:layout_constraintTop_toTopOf="@id/tvLogIn"
+
+        />
+
+    <EditText
+        android:id="@+id/etEmail"
+        style="@style/EditText.Poppins.Corner.Background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="42dp"
+        android:layout_marginVertical="16dp"
+        android:hint="Email Address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/tvLogIn" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        style="@style/EditText.Poppins.Corner.Background"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/bi_eye_slash"
+        app:layout_constraintBottom_toBottomOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="@id/etPassword"
+        app:layout_constraintTop_toTopOf="@id/etPassword" />
+
+    <EditText
+        android:id="@+id/etPasswordConfirm"
+        style="@style/EditText.Poppins.Corner.Background"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:hint="Confirm Password"
+        app:layout_constraintEnd_toEndOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+
+
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="48dp"
+        android:background="@drawable/bg_btn_log_in"
+        android:elevation="20dp"
+        android:translationZ="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Log in"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+
+        app:layout_constraintEnd_toEndOf="@id/etEmail"
+
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+        app:layout_constraintTop_toBottomOf="@id/etPasswordConfirm"
+
+
+        />
+
+
+    <LinearLayout
+        android:id="@+id/layout_divider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/google_auth"
+        app:layout_constraintEnd_toEndOf="@id/btnLogIn"
+        app:layout_constraintStart_toStartOf="@id/btnLogIn"
+        app:layout_constraintTop_toBottomOf="@id/btnLogIn">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:text="OR"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/divider_color" />
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/google_auth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_btn_2auth"
+        android:drawableStart="@drawable/google"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingHorizontal="18dp"
+        android:text="Sign in with Google"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+
+        app:layout_constraintBottom_toTopOf="@id/btnFacebook"
+        app:layout_constraintEnd_toEndOf="@id/btnLogIn"
+        app:layout_constraintStart_toStartOf="@id/btnLogIn"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFacebook"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/bg_btn_2auth"
+
+        android:drawableStart="@drawable/facebook"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingHorizontal="18dp"
+        android:text="Sign in with Facebook"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="@id/btnLogIn"
+        app:layout_constraintStart_toStartOf="@id/btnLogIn"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LogIn"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInFragment">
+
+    <TextView
+        android:id="@+id/tvLogIn"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Log in" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvLogIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="42dp"
+        android:layout_marginVertical="16dp"
+        android:hint="Email Address"
+
+        style="@style/EditText.Poppins.Corner.Background"
+        />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+        app:layout_constraintEnd_toEndOf="@id/etEmail"
+        android:layout_marginVertical="16dp"
+        android:hint="Password"
+
+        style="@style/EditText.Poppins.Corner.Background"
+        />
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+        app:layout_constraintEnd_toEndOf="@id/etEmail"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        android:layout_marginVertical="16dp"
+        style="@style/TextView.Poppins.Bold"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Log in"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+        app:layout_constraintEnd_toEndOf="@id/etEmail"
+        app:layout_constraintTop_toBottomOf="@id/tvForgotPassword"
+        android:layout_marginVertical="40dp"
+
+        android:elevation="20dp"
+        android:translationZ="10dp"
+
+        android:background="@drawable/bg_btn_log_in"
+        android:textColor="@color/white"
+
+
+        />
+
+    <TextView
+        android:id="@+id/tvAccountHave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/btnLogIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Don't have an account? "
+        app:layout_constraintHorizontal_bias="0.4"
+        style="@style/TextView.Poppins.Regular"
+        android:layout_marginVertical="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tvAccountHaveClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/btnLogIn"
+        app:layout_constraintStart_toEndOf="@id/tvAccountHave"
+
+
+
+        android:text="Sign up"
+        android:layout_marginVertical="16dp"
+        style="@style/TextView.Poppins.Bold"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
