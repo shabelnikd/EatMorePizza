@@ -1,15 +1,10 @@
 package com.shabelnikd.eatmorepizza
 
 import android.annotation.SuppressLint
-import android.content.res.ColorStateList
-import android.text.SpannableString
-import android.text.style.UnderlineSpan
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.shabelnikd.eatmorepizza.databinding.ItemCategoryBinding
 import com.shabelnikd.eatmorepizza.databinding.ItemFoodBinding
 
 class FoodAdapter(val foods: MutableList<Food>) :
@@ -25,7 +20,7 @@ class FoodAdapter(val foods: MutableList<Food>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =
-            ItemFoodBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemFoodBinding.inflate(LayoutInflater.from(parent.context), parent,false)
         return ViewHolder(binding)
     }
 

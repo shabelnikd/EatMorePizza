@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.shabelnikd.eatmorepizza.databinding.ItemCategoryBinding
 
+
 class CategoryAdapter(val categories: MutableList<Category>) :
     RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
